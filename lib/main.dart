@@ -22,6 +22,12 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,
           elevation: 0,
         ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.purple.shade400,
+            foregroundColor: Colors.white,
+          ),
+        ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.purpleAccent,
           unselectedItemColor: Colors.white,
