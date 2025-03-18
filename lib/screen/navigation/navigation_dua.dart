@@ -7,7 +7,15 @@ class NavigationDua extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Layar Navigation Dua'),
+        title: const Text('Layar Kirim Data'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context, 'Jl. Nasution');
+          },
+          child: const Text('Tutup'),
+        ),
       ),
     );
   }

@@ -21,7 +21,9 @@ class Navigation extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const NavigationSatu(),
+                    builder: (context) => const NavigationSatu(
+                      namaAnda: 'Azlansaja',
+                    ),
                   ),
                 );
               },
