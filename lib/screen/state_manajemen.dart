@@ -21,6 +21,7 @@ class _StateManajemenState extends State<StateManajemen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text('Local State => SetState()'),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               mainAxisSize: MainAxisSize.max,
@@ -44,6 +45,24 @@ class _StateManajemenState extends State<StateManajemen> {
                       });
                     },
                     icon: const Icon(Icons.plus_one)),
+              ],
+            ),
+            const Divider(thickness: 10),
+            const SizedBox(height: 30),
+            const Text('Global State => Provider'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                IconButton(
+                    onPressed: () {}, icon: const Icon(Icons.exposure_minus_1)),
+                Container(
+                  width: 50,
+                  decoration:
+                      const BoxDecoration(border: Border(bottom: BorderSide())),
+                  child: Text('X', textAlign: TextAlign.center),
+                ),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.plus_one)),
               ],
             ),
           ],
