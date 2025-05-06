@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:master/providers/counter_provider.dart';
+import 'package:provider/provider.dart';
 
 class StateManajemen extends StatefulWidget {
   const StateManajemen({super.key});
@@ -9,6 +11,13 @@ class StateManajemen extends StatefulWidget {
 
 class _StateManajemenState extends State<StateManajemen> {
   int nilaiCounter = 0;
+  CounterProvider provider = CounterProvider();
+
+  @override
+  void didChangeDependencies() {
+    provider = Provider.of<CounterProvider>(context);
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,14 +64,21 @@ class _StateManajemenState extends State<StateManajemen> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 IconButton(
-                    onPressed: () {}, icon: const Icon(Icons.exposure_minus_1)),
+                    onPressed: () {
+                      provider.kurangkan();
+                    },
+                    icon: const Icon(Icons.exposure_minus_1)),
                 Container(
                   width: 50,
                   decoration:
                       const BoxDecoration(border: Border(bottom: BorderSide())),
-                  child: Text('X', textAlign: TextAlign.center),
+                  child: Text('${provider.hasil}', textAlign: TextAlign.center),
                 ),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.plus_one)),
+                IconButton(
+                    onPressed: () {
+                      provider.tambahkan();
+                    },
+                    icon: const Icon(Icons.plus_one)),
               ],
             ),
           ],
