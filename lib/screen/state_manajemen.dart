@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:master/providers/counter_provider.dart';
+import 'package:master/screen/cart.dart';
 import 'package:provider/provider.dart';
 
 class StateManajemen extends StatefulWidget {
@@ -24,6 +25,9 @@ class _StateManajemenState extends State<StateManajemen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Layar State Manajemen'),
+        actions: const [
+          Cart(),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),

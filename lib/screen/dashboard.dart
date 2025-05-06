@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:master/screen/account.dart';
+import 'package:master/screen/cart.dart';
 import 'package:master/screen/home.dart';
 import 'package:master/screen/message.dart';
 import 'package:master/screen/navigation.dart';
@@ -30,6 +31,9 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('APP 4SIB1'),
+        actions: const [
+          Cart(),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
