@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
           fontFamily: 'Quicksand',
+          
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.purpleAccent,
             foregroundColor: Colors.white,
