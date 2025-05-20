@@ -8,5 +8,10 @@
         "id": 2,
         "jam": "09:33",
         "pelajaran": "Pemodelan dan Simulasi"
+    },
+    {
+        "id": 3,
+        "jam": "10:33",
+        "pelajaran": "Agama"
     }
 ]
